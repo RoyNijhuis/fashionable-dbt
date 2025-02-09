@@ -1,0 +1,27 @@
+name: 'fashionable_dwh'
+version: '1.0.0'
+
+vars:
+    "dbt_date:time_zone": "Europe/Amsterdam"
+
+profile: 'fashionable_dwh'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  fashionable_dwh:
+    staging:
+      +materialized: table
+      +schema: staging
+    warehouse:
+      +materialized: table
+      +schema: warehouse

@@ -1,0 +1,7 @@
+sources:
+  - name: fashionable_source
+    tables:
+      - name: fashionable
+        config:
+          external_location: "read_csv('Fashionable Sale Report.csv')"
+          formatter: oldstyle
