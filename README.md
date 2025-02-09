@@ -5,6 +5,10 @@
 - Some orders have quantity 0. Seems to happen when the orders are cancelled. Need to check what to do with NULL values in the quantity/currency/courier_status columns. 
 
 
+# Dimensional model
+![alt text](dimensional_model.png)
+
+
 # Installation
 1.  Ensure you have a Python installation that is compatible with dbt-core 1.9.2
 2.  Ensure you have Postgres installed locally
