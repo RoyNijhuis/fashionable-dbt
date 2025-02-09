@@ -16,7 +16,7 @@ with source_data as (
         , "Qty" as quantity
         , "currency" as currency
         , "Amount" as amount
-        , "ship-city" as ship_city
+        , UPPER("ship-city") as ship_city
         , "ship-postal-code" as ship_postal_code
         , "ship-country" as ship_country
         , "promotion-ids" as promotion_ids

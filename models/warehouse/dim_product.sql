@@ -6,9 +6,9 @@ with sales_cleaned as (
 , final as (
     select 
         sku        as product_id
-        , style     as style
-        , category  as category
-        , size      as size
+        , style     as product_style
+        , category  as product_category
+        , size      as product_size
     from sales_cleaned
     group by sku, style, category, size
 )
